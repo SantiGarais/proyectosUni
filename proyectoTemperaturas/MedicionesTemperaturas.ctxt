@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=MedicionesTemperaturas
+comment1.params=
+comment1.target=MedicionesTemperaturas()
+comment1.text=\r\n\ Constructor\ de\ MedicionesTemperaturas.\ Crea\ la\ lista\ de\ mediciones\ vac\u00EDa.\r\n
+comment2.params=nuevaTemperatura
+comment2.target=void\ agregarMedicion(float)
+comment2.text=\r\n\ Agrega\ una\ nueva\ medicion\ de\ temperatura\r\n
+comment3.params=
+comment3.target=void\ imprimirTemperaturas()
+comment3.text=\r\n\ Imprime\ la\ lista\ de\ temperaturas/mediciones\r\n
+comment4.params=
+comment4.target=float\ promedioTemperaturas()
+comment4.text=\r\n\ Calcula\ el\ promedio\ de\ temperaturas.\ \r\n\ Precondicion\:\ debe\ haber\ al\ menos\ una\ temperatura\ cargada\ para\ que\ el\ promedio\ tenga\ sentido.\r\n
+comment5.params=
+comment5.target=int\ cantidadRegistrosSubCero()
+comment5.text=\r\n\ Calcula\ cantidad\ de\ registros\ de\ temperaturas\ negativas\ (sub\ cero)\r\n
+comment6.params=
+comment6.target=int\ cantTemperaturasExtremas()
+comment7.params=tempConsec
+comment7.target=int\ cantidadConsec(float)
+comment7.text=\r\n\ Cuenta\ cuantas\ veces\ esta\ consecutivamente\ la\ temperatura\ tempConsec\r\n\ si\ se\ corta\ la\ secuencia\ de\ consecutivo\ el\ contador\ se\ resetea\ y\ se\ guarda\ su\ valor\ en\ maxContador\r\n\ luego\ comparo\ cual\ es\ la\ secuencia\ de\ consecutivos\ mayor\ y\ la\ retorno\r\n
+numComments=8
