@@ -1,3 +1,4 @@
+import java.util.Arrays; //asi uso el de ordenar
 /**
  * Clase ArrayUtils: contiene implementaciones de rutinas fundamentales
  * sobre arreglos.
@@ -10,8 +11,9 @@ public class ArrayUtils
        
    
     public boolean pertenece(int elem, int[] arreglo) {
-        if (arreglo.length == 0)
-            throw new IllegalArgumentException("Arreglo nulo");
+           if (arreglo == null || arreglo.length == 0)
+            throw new IllegalArgumentException("Arreglo nulo o vacío");
+            
             boolean found = false;
             int i = 0;
         while( i < arreglo.length && !found)
@@ -30,8 +32,9 @@ public class ArrayUtils
      * Calcula la suma de los elementos de un arreglo de enteros
      */
     public int suma(int[] arreglo) {
-        if (arreglo.length == 0)
-            throw new IllegalArgumentException("Arreglo nulo");
+            if (arreglo == null || arreglo.length == 0)
+            throw new IllegalArgumentException("Arreglo nulo o vacío");
+            
         int suma = 0;
         for(int item : arreglo)
         {
@@ -44,8 +47,9 @@ public class ArrayUtils
      * Calcula el valor mínimo de un arreglo de reales
      */
     public float minimo(float[] arreglo) {
-        if (arreglo.length == 0)
-            throw new IllegalArgumentException("Arreglo nulo");
+            if (arreglo == null || arreglo.length == 0)
+            throw new IllegalArgumentException("Arreglo nulo o vacío");
+            
         float min = arreglo[0];
         for( int i = 1 ; i < arreglo.length ; i++)
         {
@@ -60,8 +64,9 @@ public class ArrayUtils
      * Calcula el valor máximo de un arreglo de reales
      */
     public float maximo(float[] arreglo) {
-        if (arreglo.length == 0)
-            throw new IllegalArgumentException("Arreglo nulo");
+           if (arreglo == null || arreglo.length == 0)
+            throw new IllegalArgumentException("Arreglo nulo o vacío");
+            
         float max = arreglo[0];
         for( int i = 1 ; i < arreglo.length ; i++)
         {
@@ -76,8 +81,9 @@ public class ArrayUtils
      * Calcula el valor promedio de un arreglo de reales
      */
     public float promedio(float[] arreglo) {
-        if (arreglo.length == 0)
-            throw new IllegalArgumentException("Arreglo nulo");
+       if (arreglo == null || arreglo.length == 0)
+        throw new IllegalArgumentException("Arreglo nulo o vacío");
+       
         float suma = 0;
         for(float aux : arreglo)
         {
@@ -114,17 +120,33 @@ public int[] fibSequence(int n) {
      * Calcula la mediana de un arreglo de reales
      */
     public float mediana(float[] arreglo) {
-        //TODO: Completar la implementación, reemplazando la línea siguiente
-        return 0;
+            if (arreglo == null || arreglo.length == 0)
+            throw new IllegalArgumentException("Arreglo nulo o vacío"); 
+            
+            float medianaArre ;
+            Arrays.sort(arreglo);
+            int mitad = arreglo.length / 2 ;
+            if(arreglo.length % 2 == 0)
+            {
+                medianaArre = (arreglo[mitad -1 ] + arreglo[mitad]) / 2 ;
+            }else{
+                medianaArre = arreglo[mitad];
+            }
+            
+                
+        
+        
+        return medianaArre;
     }
    
     /**
      * Comprueba si dos arreglos de enteros son iguales
      */
     public boolean iguales(int[] arr1, int[] arr2) {
-                if (arr1 != null && arr2 != null)
+            if (arr1 == null || arr2 == null)
             throw new IllegalArgumentException("Almenos un Arreglo es nulo");
-        boolean sonIguales = true;
+        
+            boolean sonIguales = true;
         if( arr1.length == arr2.length)
         {
             int i = 0;
@@ -143,7 +165,8 @@ public int[] fibSequence(int n) {
      * Comprueba si un arreglo tiene valores repetidos
      */
     public boolean tieneRepetidos(int[] arreglo) {
-        assert arreglo.length > 0 : "Arreglo vacio";
+        if (arreglo == null || arreglo.length == 0)
+            throw new IllegalArgumentException("Arreglo nulo o vacío");
 
        boolean repetidos = false;
        int i = 0;
@@ -166,8 +189,9 @@ public int[] fibSequence(int n) {
      * Comprueba si un arreglo tiene dos valores cuya suma dé cero.
      */
     public boolean tieneOpuestos(float[] arreglo) {
-        assert arreglo.length > 0 : "Arreglo vacio";
-
+        if (arreglo == null || arreglo.length == 0)
+            throw new IllegalArgumentException("Arreglo nulo o vacío");
+            
        boolean opuestos = false;
        int i = 0;
        int j = 0;
